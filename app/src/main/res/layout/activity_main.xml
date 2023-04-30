@@ -1,0 +1,149 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="20dp"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:id="@+id/title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/currency_calculate"
+        android:textSize="30sp"
+        android:layout_marginTop="60dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TableLayout
+        android:id="@+id/calculate_table"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:stretchColumns="1"
+        app:layout_constraintBottom_toTopOf="@id/result_text"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/title">
+
+        <TableRow
+            android:gravity="center_vertical">
+
+            <TextView
+                style="@style/TitleTextStyle"
+                android:id="@+id/sending_country_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="송금 국가" />
+
+            <TextView
+                android:id="@+id/sending_country_result"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="미국(USD)" />
+        </TableRow>
+
+        <TableRow
+            android:gravity="center_vertical">
+
+            <TextView
+                style="@style/TitleTextStyle"
+                android:id="@+id/recipient_country_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="수취 국가" />
+
+            <TextView
+                android:id="@+id/recipient_country_result"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="한국(krw)" />
+        </TableRow>
+
+        <TableRow
+            android:gravity="center_vertical">
+
+            <TextView
+                style="@style/TitleTextStyle"
+                android:id="@+id/currency_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="환율" />
+
+            <TextView
+                android:id="@+id/currency_result"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+        </TableRow>
+
+        <TableRow
+            android:gravity="center_vertical">
+
+            <TextView
+                style="@style/TitleTextStyle"
+                android:id="@+id/time_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="조회 시간" />
+
+            <TextView
+                android:id="@+id/time_result"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+        </TableRow>
+
+        <TableRow
+            android:gravity="center_vertical">
+
+            <TextView
+                style="@style/TitleTextStyle"
+                android:id="@+id/seding_money_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="송금액" />
+
+            <EditText
+                android:id="@+id/input_sending_result"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:inputType="numberDecimal" />
+
+
+            <TextView
+                android:id="@+id/usd_unit"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="USD" />
+        </TableRow>
+    </TableLayout>
+
+    <Button
+        android:id="@+id/calculate_btn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="계산하기"
+        app:layout_constraintBottom_toTopOf="@id/result_text"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/calculate_table" />
+
+    <TextView
+        android:id="@+id/result_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/calculate_table" />
+
+    <ProgressBar
+        android:id="@+id/progress_circular"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+</androidx.constraintlayout.widget.ConstraintLayout>

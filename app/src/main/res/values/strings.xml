@@ -1,0 +1,6 @@
+<resources>
+    <string name="app_name">CurrencyApp</string>
+    <string name="currency_calculate">환율 계산</string>
+    <string name="calculate_result">수취 금액은 %s %s 입니다.</string>
+    <string name="calculate_warn">송금액이 바르지 않습니다.</string>
+</resources>

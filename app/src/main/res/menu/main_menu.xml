@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/krw"
+        android:title="한국(KRW)" />
+    <item
+        android:id="@+id/jpy"
+        android:title="일본(JPY)" />
+    <item
+
+        android:id="@+id/php"
+        android:title="필리핀(PHP)" />
+</menu>
